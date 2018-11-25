@@ -1,6 +1,5 @@
 #!/bin/bash
 
-sleep 2m
 QEMUPID=$(pidof --single-shot qemu-system-x86_64)
 QEMUGROUPID=$(/bin/ps -Lo pgid --no-heading --pid $QEMUPID | sort --unique)
 if [[ ! $1 =~ ^-?[0-9]+$ ]] ; then
